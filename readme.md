@@ -48,7 +48,7 @@ varDF = read.table("data\\features.txt", header=FALSE,col.names=c("id","Vname"))
 vctrname = as.vector(varDF[,2])
 
 
-**Lets read the file of activities to match back to the datasets**
+**Lets read the file of activity labels to match back to the datasets**
 **Im going to hold this data frame to the very end**
 **becuase if I match too soon the sort sequence is changed**
 **and cbind() will not work.**
