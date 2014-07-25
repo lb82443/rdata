@@ -1,5 +1,4 @@
-Documentation for creation of tidy_data.csv
-========================================================
+##Documentation for creation of tidy_data.csv
 
 This data is based on analysis as documented in the paper below:
 
