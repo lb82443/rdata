@@ -1,8 +1,3 @@
-## Clear up the environment during testing.
-## rm(list = ls(all = TRUE))
-
-setwd("C:\\Users\\Lou\\rdata")
-
 ## in this step we will download the zip file
 ## data will be unzipped manually to appropriate directory....in this case the 
 ## \data directory under the woking directory set above.
@@ -36,12 +31,10 @@ tstidDF = read.table("data\\test\\subject_test.txt", header=FALSE, col.names=c("
 
 tstactDF = read.table("data\\test\\y_test.txt", header=FALSE, col.names=c("activity"))
 
-## had to use this command to see more than 100 columns in Rstudio
-utils::View(tstDF)
+
 
 test_DF = cbind(tstidDF,tstactDF,tstDF)
 
-utils::View(test_DF)
 
 ########################################################
 ## Begin reading in raw files for training datasets    #
@@ -53,12 +46,9 @@ trnidDF = read.table("data\\train\\subject_train.txt", header=FALSE, col.names=c
 
 trnactDF = read.table("data\\train\\y_train.txt", header=FALSE, col.names=c("activity"))
 
-## had to use this command to see more than 100 columns in Rstudio
-utils::View(trnDF)
 
 train_DF = cbind(trnidDF,trnactDF,trnDF)
 
-utils::View(train_DF)
 
 ## Now we rbind() the training and test data frames to create one large file
 
@@ -72,7 +62,6 @@ utils::View(final_DF)
 
 lbld_DF = merge(final_DF,actlblDF,by.x="activity",by.y="activity",all=TRUE  )
 
-utils::View(lbld_DF)
 
 
 ## Now we need to select only those variables related to mean and standard deviation
@@ -82,7 +71,6 @@ utils::View(lbld_DF)
 
 cln_DF <- lbld_DF[, grep("subject|act_label|Mean|mean|std", names(lbld_DF), value=TRUE)]
 
-utils::View(cln_DF)
 
 ## Now we do our final summary by activity label and subject calculate the mean for the values above
 
