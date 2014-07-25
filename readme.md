@@ -23,7 +23,8 @@ The data represents information from various subjects relative to their activiti
 
 A wide variety of measures were gathered from the accelerometer of a Samsung smartphone and captured in the data gathered below.
 
-The final variables and definitions in tidy_data.csv are defined in the CodeBook.md in the repositor on Git Hub.
+The final variables and definitions in tidy_data.csv are defined in the CodeBook.md in the repository on Git Hub.
+
 [CodeBook Link](https://github.com/lb82443/rdata/blob/master/CodeBook.md)
 
 Below is the detailed documentation of the process of creating the tidy_data.csv file.
