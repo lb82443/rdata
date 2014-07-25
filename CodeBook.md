@@ -8,6 +8,7 @@ subj_id
   
 act_lbl   
     Identifies the activity being performed in the test.
+    
     Activity Label
     WALKING
     WALKING_UPSTAIRS
@@ -21,6 +22,7 @@ All values below are averages for each test subject and activity.
 tBodyAcc.mean...X
     Mean of body acceleration along the X axis, in time.
     range -1 to 1
+    
     
 tBodyAcc.mean...Y
      Mean of body acceleration along the Y axis, in time.
