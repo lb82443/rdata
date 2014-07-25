@@ -7,12 +7,19 @@ This data is based on analysis as documented in the paper below:
 
 The data represents information from various subjects relative to their activities. These activities are documented in the tidy data set below and are:
 
+
 1 WALKING
+
 2 WALKING_UPSTAIRS
+
 3 WALKING_DOWNSTAIRS
+
 4 SITTING
+
 5 STANDING
+
 6 LAYING
+
 
 A wide variety of measures were gathered from the accelerometer of a Samsung smartphone and captured in the data gathered below.
 
@@ -21,11 +28,11 @@ The final variables and definitions in tidy_data.csv are defined in the CodeBook
 Below is the detailed documentation of the process of creating the tidy_data.csv file.
 
 
-***************************************************************************************
- in this step we will download the zip file
- data will be unzipped manually to appropriate directory....in this case the 
- \data directory under the woking directory 
-***************************************************************************************
+
+**in this step we will download the zip file**
+**data will be unzipped manually to appropriate directory....**
+**in this case the \data directory under the woking directory** 
+
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 
 download.file(fileUrl,destfile="data\\dataset.zip",mode="wb")
