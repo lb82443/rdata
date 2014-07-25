@@ -21,43 +21,49 @@ The final variables and definitions in tidy_data.csv are defined in the CodeBook
 Below is the detailed documentation of the process of creating the tidy_data.csv file.
 
 
-## set the base directory used to performa the analysis
-setwd("C:\\Users\\Lou\\rdata")
-
-## in this step we will download the zip file
-## data will be unzipped manually to appropriate directory....in this case the 
-## \data directory under the woking directory set above.
-
+***************************************************************************************
+ in this step we will download the zip file
+ data will be unzipped manually to appropriate directory....in this case the 
+ \data directory under the woking directory 
+***************************************************************************************
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 
 download.file(fileUrl,destfile="data\\dataset.zip",mode="wb")
  
+***************************************************************************************
 
-## Lets read in file of variable names and then load into vector to use to add 
-## variables to the large test file
+ Lets read in file of variable names and then load into vector to use to add 
+ variables to the large test file
+***************************************************************************************
+
 
 varDF = read.table("data\\features.txt", header=FALSE,col.names=c("id","Vname"))
 
 vctrname = as.vector(varDF[,2])
 
-## Lets read the file of activities to match back to the datasets
-## I'm going to hold this data frame to the very end
-## becuase if I match too soon the sort sequence is changed
-## and cbind() will not work.
+***************************************************************************************
+ Lets read the file of activities to match back to the datasets
+ I'm going to hold this data frame to the very end
+ becuase if I match too soon the sort sequence is changed
+ and cbind() will not work.
+***************************************************************************************
 
 actlblDF = read.table("data\\activity_labels.txt", header=FALSE,col.names=c("activity","act_label"))
 
-########################################################
-## Begin reading in raw files for test datasets        #
-########################################################
+***************************************************************************************
+ Begin reading in raw files for test datasets       
+***************************************************************************************
 
-## read the data table for test data
+ read the data table for test data
+ 
 tstDF = read.table("data\\test\\X_test.txt", header=FALSE, col.names=vctrname)
 
-## read the subject ID's for the test data
+ read the subject ID's for the test data
+ 
 tstidDF = read.table("data\\test\\subject_test.txt", header=FALSE, col.names=c("subject"))
 
-## read the activities for the test data
+read the activities for the test data
+
 tstactDF = read.table("data\\test\\y_test.txt", header=FALSE, col.names=c("activity"))
 
 ## had to use this command to see more than 100 columns in Rstudio
