@@ -17,7 +17,7 @@ act_lbl
     STANDING
     LAYING
 
-#All values below are averages for each test subject and activity.
+###All values below are averages for each test subject and activity.
     
 tBodyAcc.mean...X
 
@@ -226,7 +226,7 @@ tBodyGyroJerkMag.std..
     Std Dev of BodyGyroMag in time.
     range -1 to 1
     
-#All variables below are fourier transforms of the data
+###All variables below are fourier transforms of the data
 
 fBodyAcc.mean...X
 
