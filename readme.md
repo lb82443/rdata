@@ -26,7 +26,7 @@ The final variables and definitions in tidy_data.csv are defined in the CodeBook
 
 [CodeBook Link](https://github.com/lb82443/rdata/blob/master/CodeBook.md)
 
-Below is the detailed documentation of the process of creating the tidy_data.csv file.
+###Below is the detailed documentation of the process of creating the tidy_data.csv file.
 
 
 
