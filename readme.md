@@ -49,7 +49,7 @@ vctrname = as.vector(varDF[,2])
 
 
 **Lets read the file of activities to match back to the datasets**
-**I'm going to hold this data frame to the very end**
+**Im going to hold this data frame to the very end**
 **becuase if I match too soon the sort sequence is changed**
 **and cbind() will not work.**
 
@@ -64,7 +64,7 @@ actlblDF = read.table("data\\activity_labels.txt", header=FALSE,col.names=c("act
  
 tstDF = read.table("data\\test\\X_test.txt", header=FALSE, col.names=vctrname)
 
-**read the subject ID's for the test data
+**read the subject IDs for the test data
  
 tstidDF = read.table("data\\test\\subject_test.txt", header=FALSE, col.names=c("subject"))
 
@@ -117,7 +117,7 @@ lbld_DF = merge(final_DF,actlblDF,by.x="activity",by.y="activity",all=TRUE  )
 
 
 **Now we need to select only those variables related to mean and standard deviation
-**based on visual inspection of column names I'll search for Mean mean and std
+**based on visual inspection of column names Ill search for Mean mean and std
 **I selected this broad definition to err on the side of including more data than
 **may have been necessary. Some of the definitions in the paper were vague.
 
